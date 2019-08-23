@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Playground from './components/Playground';
-
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
+import Playground from './components/Playground.jsx';
 
 import styled from 'styled-components';
 
@@ -20,7 +19,7 @@ class App extends Component {
     return (
       <Router>
         <StyledApp>
-          <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <ul className="navbar-nav mr-auto">
               <li><Link to={'/'} className="nav-link">Home</Link></li>
               <li><Link to={'/about'} className="nav-link">About</Link></li>

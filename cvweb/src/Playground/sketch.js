@@ -2,12 +2,12 @@ export default function sketch(p) {
     let canvas;
 
     p.setup = () => {
-        canvas = p.createCanvas(300, 200);
+        canvas = p.createCanvas(window.screen.availWidth, window.screen.availHeight);
         p.noStroke();
     }
 
     p.draw = () => {
-        p.background('orangered');
+        p.background('black');
         p.ellipse(150, 100, 100, 100);
     }
 

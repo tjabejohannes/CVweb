@@ -36,6 +36,22 @@ class About extends Component {
                     <h2>              .      </h2>
                     <h2>              .      </h2>
                 </Card>
+                <Card>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                </Card>
+                <Card>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                    <h2>              .      </h2>
+                </Card>
             </StyledCardContainer>
         );
     }
