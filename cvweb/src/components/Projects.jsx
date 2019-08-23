@@ -15,10 +15,20 @@ class Projects extends Component {
         return (
             <StyledCardContainer>
                 <Card>
-                    <Project name="ClipPost" github="https://github.com/tjabejohannes/ClipPost" badges={['Electron', 'NodeJS', 'JavaScript']} />
+                    <Project 
+                        name="ClipPost" 
+                        link="https://github.com/tjabejohannes/ClipPost" 
+                        description="Blavlalsd aksj dlaksd lkaslkdj alksdlk ja lks dlasjdghakd" 
+                        badges={['Electron', 'NodeJS', 'JavaScript']} 
+                        image="https://raw.githubusercontent.com/tjabejohannes/velectron/master/front/Example%23.png"/>
                 </Card>
                 <Card>
-                    <Project name="P5" github="https://github.com/tjabejohannes/mySite" badges={['p5.js', 'JavaScript']} />
+                    <Project 
+                    name="P5" 
+                    link="http://tjabejv.nvg.org/" 
+                    description="P5js is JavaScript's answer to the Processing graphical library. Both are OpenSource." 
+                    badges={['p5.js', 'JavaScript']} 
+                    image="http://localhost:3000/P5js.png" />
                 </Card>
             </StyledCardContainer>);
     }

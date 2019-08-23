@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Image } from 'react-bootstrap';
 
 const StyledCard = styled.div`
     background: #f0f0f0;
@@ -43,7 +42,7 @@ class Card extends Component {
             return (
                 <StyledCard >
                     <StyledBackground>
-                        <img src="http://localhost:3000/ProfileBackground2.svg" alt="something" />
+                        <img src="http://localhost:3000/ProfileBackgroundArt.png" alt="something" />
                     </StyledBackground>
                     <div className={this.props.type}>
                         {this.props.children}

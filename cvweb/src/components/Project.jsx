@@ -5,20 +5,30 @@ import { Chip } from '@material-ui/core';
 
 
 const StyledProject = styled.div`
-    display: flex;
-    flex-direction: column;
+    
     width:100%;
-    height:100px;
     text-align: left;
+    display: flex;
 
+    .information{
+        width:60%;
+        display: flex;
+        flex-direction: column;
+    }
     .title{
-        height: 50%;
+        margin-left: 5px;
+        margin-bottom: 5px;
         background-image: linear-gradient(to right, #eaeaea , #f0f0f0);
         border-radius:2px;
     }
 
+    .Description{
+        margin-left: 10px;
+        color: #959595;;
+    }
+
     .badges{
-        height: 50%;
+        height: 80%;
         margin:1%;
     }
     .badge{
@@ -29,26 +39,49 @@ const StyledProject = styled.div`
         margin-block-start:2%;
         margin-left:2%;
     }
+    img{
+        width: 40%;
+        height:auto;
+        margin-left: 10%;
+        margin: 10px;
+        border-radius: 3%;
+    }
+    a{
+        text-decoration : none;
+    }
+    a:hover{
+        text-decoration : none;
+    }
 `
 
 class Project extends Component {
 
     render() {
         return (
-            <StyledProject>
-                <div className="title">
-                    <h1>{this.props.name}</h1>
-                </div>
-                <div className="badges">
-                    {this.props.badges.map((element, i) => {
-                        return (
-                            <div className="badge" key={i}>
-                                <Chip label={element} />
-                            </div>
-                        )
-                    })}
-                </div>
-            </StyledProject>
+            <a href={this.props.link}>
+                <StyledProject>
+                    <div className="information" >
+                        <div className="title">
+                            <h1>{this.props.name}</h1>
+                        </div>
+                        <div className="Description">
+                            <p>
+                                {this.props.description}
+                            </p>
+                        </div>
+                        <div className="badges">
+                            {this.props.badges.map((element, i) => {
+                                return (
+                                    <div className="badge" key={i}>
+                                        <Chip label={element} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    <img src={this.props.image} alt="preview"/>
+                </StyledProject>
+            </a>
         );
     }
 }
