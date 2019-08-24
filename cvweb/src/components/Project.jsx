@@ -9,14 +9,14 @@ const StyledProject = styled.div`
     width:100%;
     text-align: left;
     display: flex;
+    cursor: pointer;
 
     .information{
-        width:60%;
+        width:80%;
         display: flex;
         flex-direction: column;
     }
     .title{
-        margin-left: 5px;
         margin-bottom: 5px;
         background-image: linear-gradient(to right, #eaeaea , #f0f0f0);
         border-radius:2px;
@@ -37,51 +37,49 @@ const StyledProject = styled.div`
     h1{
         font-size: 20px;
         margin-block-start:2%;
-        margin-left:2%;
+        margin-left: 15px;
     }
     img{
-        width: 40%;
+        width: 20%;
         height:auto;
         margin-left: 10%;
         margin: 10px;
         border-radius: 3%;
     }
-    a{
-        text-decoration : none;
-    }
-    a:hover{
-        text-decoration : none;
-    }
 `
 
 class Project extends Component {
-
+    constructor() {
+        super();
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        window.location.replace(this.props.link);
+    }
     render() {
         return (
-            <a href={this.props.link}>
-                <StyledProject>
-                    <div className="information" >
-                        <div className="title">
-                            <h1>{this.props.name}</h1>
-                        </div>
-                        <div className="Description">
-                            <p>
-                                {this.props.description}
-                            </p>
-                        </div>
-                        <div className="badges">
-                            {this.props.badges.map((element, i) => {
-                                return (
-                                    <div className="badge" key={i}>
-                                        <Chip label={element} />
-                                    </div>
-                                )
-                            })}
-                        </div>
+            <StyledProject onClick={this.handleClick}>
+                <div className="information" >
+                    <div className="title">
+                        <h1>{this.props.name}</h1>
                     </div>
-                    <img src={this.props.image} alt="preview"/>
-                </StyledProject>
-            </a>
+                    <div className="Description">
+                        <p>
+                            {this.props.description}
+                        </p>
+                    </div>
+                    <div className="badges">
+                        {this.props.badges.map((element, i) => {
+                            return (
+                                <div className="badge" key={i}>
+                                    <Chip label={element} />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+                <img src={this.props.image} alt="preview" />
+            </StyledProject>
         );
     }
 }
