@@ -19,47 +19,37 @@ const StyledLargeCard = styled(StyledCard)`
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
 `
-
-
-const StyledBackground = styled.div`
-    width:100%;
-    height:auto;
-    z-index: -1;
-    position: sticky;
-    text-align:left;
-
-    img{
-        width:100%;
-        height:auto;
-        position: absolute;
-        
-    }
+const StyledLargeCardNoHover = styled(StyledCard)`
+    width: 98%;
 `
+
 
 class Card extends Component {
     state = {}
     render() {
 
-        if (this.props.type !== "large") {
+        if (this.props.size === "large") {
             return (
-                <StyledCard >
-                    <div className={this.props.type}>
-                        {this.props.children}
-                    </div>
-                </StyledCard>);
-        } else {
-            return (
-                <StyledLargeCard >
-                    {this.props.styledBackground ?
-                        <StyledBackground>
-                            <img src="http://localhost:3000/ProfileBackgroundArt.png" alt="something" />
-                        </StyledBackground> : ""
-                    }
-                    <div className={this.props.type}>
-                        {this.props.children}
-                    </div>
-                </StyledLargeCard>);
-        }
+                this.props.type === "noHover" ?
+                    <StyledLargeCardNoHover >
+                        <div className={this.props.type}>
+                            {this.props.children}
+                        </div>
+                    </StyledLargeCardNoHover> :
+                    <StyledLargeCard >
+                        <div className={this.props.type}>
+                            {this.props.children}
+                        </div>
+                    </StyledLargeCard>
+            );
+    } else {
+    return (
+        <StyledCard >
+            <div className={this.props.type}>
+                {this.props.children}
+            </div>
+        </StyledCard>);
+}
     }
 }
 

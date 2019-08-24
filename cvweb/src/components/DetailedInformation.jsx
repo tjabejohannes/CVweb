@@ -4,13 +4,21 @@ import styled from 'styled-components';
 const StyledDetailedInformation = styled.div`
     display: flex;
     width: 100%;
-    height:300px;
+    height:200px;
 
-    .title{
-        width: 30%;
-        font-size:30px;
+    .information{
         background-image: linear-gradient(to right, #f0f0f0 , #eaeaea);
+        padding: 10px;
+    }
+
+    .information h1{
+        font-size:20px;
         font-weight: bold;
+    }
+
+    .description{
+        font-size:10px;
+        color: #959595;
     }
 
     .details{
@@ -39,46 +47,19 @@ class DetailedInformation extends Component {
     render() {
         return (
             <StyledDetailedInformation>
-                <div className="title">
-                    Hobbies
+                <div className="information">
+                    <h1>{this.props.title}</h1>
+                    <div className="description">
+                        {this.props.description}
+                    </div>
                 </div>
                 <div className="details">
-                    <div className="detail">
-                        Biking
-                    </div>
-                    <div className="detail">
-                        Boxing
-                    </div>
-                    <div className="detail">
-                        Snowboarding
-                    </div>
-                    <div className="detail">
-                        Biking
-                    </div>
-                    <div className="detail">
-                        Boxing
-                    </div>
-                    <div className="detail">
-                        Snowboarding
-                    </div>
-                    <div className="detail">
-                        Biking
-                    </div>
-                    <div className="detail">
-                        Boxing
-                    </div>
-                    <div className="detail">
-                        Snowboarding
-                    </div>
-                    <div className="detail">
-                        Biking
-                    </div>
-                    <div className="detail">
-                        Boxing
-                    </div>
-                    <div className="detail">
-                        Snowboarding
-                    </div>
+                    {this.props.details.map((element, i) => {
+                        return(
+                        <div className="detail" key={i}>
+                            {element}
+                        </div>)
+                    })}
                 </div>
             </StyledDetailedInformation>
         )

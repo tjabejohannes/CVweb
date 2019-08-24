@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Chip } from '@material-ui/core';
+import { Chip, Avatar} from '@material-ui/core';
+import FaceIcon from '@material-ui/icons/Face';
 
 
 
@@ -9,6 +10,7 @@ const StyledProject = styled.div`
     width:100%;
     text-align: left;
     display: flex;
+    align-items: center;
     cursor: pointer;
 
     .information{
@@ -21,30 +23,76 @@ const StyledProject = styled.div`
         background-image: linear-gradient(to right, #eaeaea , #f0f0f0);
         border-radius:2px;
     }
+    .title h1{
+        font-size: 20px;
+        margin-block-start:10px;
+        margin-left: 15px;
+        font-weight: bold;
+    }
 
-    .Description{
-        margin-left: 10px;
-        color: #959595;;
+    .description{
+        color: #000;
+    }
+
+    .description h1{
+        font-size: 15px;
+        color: #959595;
+        
+    }
+
+    .projectInfoContainer{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15px;
+        padding:10px;
     }
 
     .badges{
         height: 80%;
         margin:1%;
     }
+    .badges h1{
+        font-size: 15px;
+        color: #959595;
+    }
     .badge{
         margin-block-end:2%;
     }
-    h1{
-        font-size: 20px;
-        margin-block-start:2%;
-        margin-left: 15px;
+
+    .chipsTweaks{
+        background-color:  #fe8b8b;
     }
-    img{
-        width: 20%;
-        height:auto;
-        margin-left: 10%;
+    .avatarTweaks{
+        background-color:  #fe8b8b;
+        padding: 4%;
+    }
+
+    .technology{
+        max-width: 60%;
+        min-width: 20%;
+    }
+
+    .contributors{
+        margin-left: 15px;
+        padding:10px;
+    }
+
+    .imageContainer{
+        height:100%;
+    }
+    .crop {
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
         margin: 10px;
         border-radius: 3%;
+        vertical-align: middle;
+    }
+    .crop img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 200px;
+        height: 200px;
     }
 `
 
@@ -63,22 +111,46 @@ class Project extends Component {
                     <div className="title">
                         <h1>{this.props.name}</h1>
                     </div>
-                    <div className="Description">
-                        <p>
-                            {this.props.description}
-                        </p>
+                    <div className="projectInfoContainer">
+                        <div className="description">
+                            <h1>
+                                Description:
+                                </h1>
+                            <p>
+                                {this.props.description}
+                            </p>
+                        </div>
+                        <div className="badges technology">
+                            <h1>
+                                Technology:
+                                </h1>
+                            {this.props.stack.map((element, i) => {
+                                return (
+                                    <div className="badge" key={i}>
+                                        <Chip label={element.name} color="secondary"  className="chipsTweaks"/>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
-                    <div className="badges">
-                        {this.props.badges.map((element, i) => {
+                    <div className="badges contributors">
+                        <h1>
+                            Contributors:
+                            </h1>
+                        {this.props.contributor.map((element, i) => {
                             return (
                                 <div className="badge" key={i}>
-                                    <Chip label={element} />
+                                    <Chip icon={<FaceIcon />} label={element} />
                                 </div>
                             )
                         })}
                     </div>
                 </div>
-                <img src={this.props.image} alt="preview" />
+                <div className="imageContainer">
+                    <div className="crop">
+                        <img src={this.props.image} alt="preview" />
+                    </div>
+                </div>
             </StyledProject>
         );
     }

@@ -17,15 +17,33 @@ class Projects extends Component {
                 name: "ClipPost",
                 link: "https://github.com/tjabejohannes/ClipPost",
                 description: "Blavlalsd aksj dlaksd lkaslkdj alksdlk ja lks dlasjdghakd",
-                badges: ['Electron', 'NodeJS', 'JavaScript'],
-                image: "https://raw.githubusercontent.com/tjabejohannes/velectron/master/front/Example%23.png"
+                stack: [{name:'Electron', icon:"electron-original"}, {name:'Android', icon:"android-plain"}, {name:'NodeJS', icon:"nodejs-plain"}],
+                image: "https://raw.githubusercontent.com/tjabejohannes/velectron/master/front/Example%23.png",
+                contributor: ['Tjabe Johannes van Lessen', 'Tor Skuggevik'],
             },
             {
                 name: "P5",
                 link: "http://tjabejv.nvg.org/",
                 description: "P5js is JavaScript's answer to the Processing graphical library. Both are OpenSource.",
-                badges: ['p5.js', 'JavaScript'],
-                image: "http://localhost:3000/P5js.png"
+                stack: [{name:'Java', icon:"java-plain"}, {name:'Android', icon:"android-plain"}, {name:'NodeJS', icon:"nodejs-plain"}],
+                image: "http://localhost:3000/P5js.png",
+                contributor: ['Tjabe Johannes van Lessen'],
+            },
+            {
+                name: "BotB",
+                link: "https://github.com/battleofthebases/game",
+                description: "TDT4240: Software Architecture Project.",
+                stack: [{name:'Java', icon:"java-plain"}, {name:'Android', icon:"android-plain"}, {name:'NodeJS', icon:"nodejs-plain"}],
+                image: "http://localhost:3000/BotB.jpg",
+                contributor: ['Tjabe Johannes van Lessen'],
+            },
+            {
+                name: "Experter i team",
+                link: "https://github.com/OlavH96/EIT",
+                description: "TDT4856: Eksperter i team.",
+                stack: [{name:'Java', icon:"java-plain"}, {name:'Android', icon:"android-plain"}, {name:'NodeJS', icon:"nodejs-plain"}],
+                image: "http://localhost:3000/EIT.png",
+                contributor: ['Anders Ulfsnes', 'Espen Marinius Hansen', 'Olav Reppe Husby', 'Michael Skibeli Mullins', 'Tjabe Johannes van Lessen', 'Torstein Molland'],
             }
         ]
     }
@@ -35,13 +53,14 @@ class Projects extends Component {
             <StyledCardContainer>
                 {this.state.projects.map((element, i) => {
                     return(
-                    <Card key={i} type="large">
+                    <Card key={i} size="large">
                         <Project
                             name={element.name}
                             link={element.link}
                             description={element.description}
-                            badges={element.badges}
-                            image={element.image} />
+                            stack={element.stack}
+                            image={element.image}
+                            contributor={element.contributor} />
                     </Card>)
                 })};
             </StyledCardContainer>);

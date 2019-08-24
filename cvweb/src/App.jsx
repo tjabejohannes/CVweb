@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
-import Playground from './components/Playground.jsx';
+/* import Playground from './components/Playground.jsx'; */
 
 import styled from 'styled-components';
 
@@ -20,10 +20,13 @@ class App extends Component {
       <Router>
         <StyledApp>
           <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <ul className="navbar-nav mr-auto">
-              <li><Link to={'/'} className="nav-link">Home</Link></li>
-              <li><Link to={'/about'} className="nav-link">About</Link></li>
-              <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
+              <li className="nav-item"><Link to={'/'} className="nav-link">Home</Link></li>
+              <li className="nav-item"><Link to={'/about'} className="nav-link">About</Link></li>
+              <li className="nav-item"><Link to={'/projects'} className="nav-link">Projects</Link></li>
               {/*<li><Link to={'/playground'} className="nav-link">Playground</Link></li>*/}
             </ul>
           </nav>
