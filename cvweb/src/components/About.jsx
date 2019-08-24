@@ -17,13 +17,18 @@ class About extends Component {
         detailedCards: [
             {
                 title: "Technology",
-                details: ['React','React native','NodeJS'],
+                details: [{name:'Android', icon:"android-plain"}, {name:'NodeJS', icon:"nodejs-plain"},{name:'HTML',icon:'html5-plain'},{name:'Git',icon:'git-plain'},{name:'CSS',icon:'css3-plain'},{name:'Electron',icon:"electron-original"},{name:'Mysql',icon:'mysql-plain'}],
                 description: "Comfortable development technologies",
             },
             {
                 title: "Languages",
-                details: ['JavaScript','Java','Haskell','Apex'],
+                details: [{name:'Java', icon:"java-plain"}, {name:'JavaScript', icon:"javascript-plain"}, {name:'Python', icon:"python-plain"},],
                 description: "Comfortable development languages",
+            },
+            {
+                title: "Software",
+                details: [{name:'Photoshop', icon:"photoshop-line"}, {name:'Visualstudio',icon:'visualstudio-plain'},{name:'Gitlab',icon:'gitlab-plain'},{name:'React',icon:'react-original'},{name:'CSS',icon:'css3-plain'},{name:'Electron',icon:"electron-original"},{name:'Mysql',icon:'mysql-plain'}],
+                description: "Software used weekly",
             },
         ]
     }

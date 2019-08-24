@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Chip, Avatar } from '@material-ui/core';
 
 const StyledDetailedInformation = styled.div`
     display: flex;
     width: 100%;
-    height:200px;
+    height:300px;
 
     .information{
         background-image: linear-gradient(to right, #f0f0f0 , #eaeaea);
@@ -28,6 +29,7 @@ const StyledDetailedInformation = styled.div`
         width:70%;
         margin-left:2%;
         text-align: left;
+        padding:5%;
     }
 
     .detail {
@@ -40,6 +42,26 @@ const StyledDetailedInformation = styled.div`
         margin-top: 2%;
         width:44%;
         margin-right:2%;
+    }
+    .badges{
+        height: 80%;
+        margin:1%;
+    }
+    .badges h1{
+        font-size: 15px;
+        color: #959595;
+    }
+    .badge{
+        margin-block-end:2%;
+    }
+
+    .chipsTweaks{
+        background-color:  #fff;
+        color: #000;
+    }
+    .avatarTweaks{
+        background-color:  #fff;
+        padding: 7%;
     }
 `
 
@@ -55,10 +77,11 @@ class DetailedInformation extends Component {
                 </div>
                 <div className="details">
                     {this.props.details.map((element, i) => {
-                        return(
-                        <div className="detail" key={i}>
-                            {element}
-                        </div>)
+                        return (
+                            <div className="badge" key={i}>
+                                <Chip label={element.name} color="secondary" avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks" />
+                            </div>
+                        )
                     })}
                 </div>
             </StyledDetailedInformation>

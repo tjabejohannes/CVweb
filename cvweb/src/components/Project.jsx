@@ -60,11 +60,12 @@ const StyledProject = styled.div`
     }
 
     .chipsTweaks{
-        background-color:  #fe8b8b;
+        background-color:  #fff;
+        color: #000;
     }
     .avatarTweaks{
-        background-color:  #fe8b8b;
-        padding: 4%;
+        background-color:  #fff;
+        padding: 5%;
     }
 
     .technology{
@@ -127,7 +128,7 @@ class Project extends Component {
                             {this.props.stack.map((element, i) => {
                                 return (
                                     <div className="badge" key={i}>
-                                        <Chip label={element.name} color="secondary"  className="chipsTweaks"/>
+                                        <Chip label={element.name} color="secondary"  avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/"+element.icon+".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks"/>
                                     </div>
                                 )
                             })}
