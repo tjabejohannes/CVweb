@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 /* import Playground from './components/Playground.jsx'; */
@@ -19,21 +18,17 @@ class App extends Component {
     return (
       <Router>
         <StyledApp>
-          <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item"><Link to={'/'} className="nav-link">Home</Link></li>
-              <li className="nav-item"><Link to={'/about'} className="nav-link">About</Link></li>
+          <nav className="navbar navbar-expand fixed-top navbar-light bg-light">
+
+            <ul className="navbar-nav">
+              <li className="nav-item"><Link to={'/'} className="nav-link">About Me</Link></li>
               <li className="nav-item"><Link to={'/projects'} className="nav-link">Projects</Link></li>
               {/*<li><Link to={'/playground'} className="nav-link">Playground</Link></li>*/}
             </ul>
           </nav>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={About} />
             <Route path='/projects' component={Projects} />
-            <Route path='/about' component={About} />
             {/*<Route path='/playground' component={Playground} />*/}
           </Switch>
         </StyledApp>

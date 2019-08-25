@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Chip, Avatar} from '@material-ui/core';
+import { Chip, Avatar } from '@material-ui/core';
 import FaceIcon from '@material-ui/icons/Face';
 
 
@@ -80,12 +80,12 @@ const StyledProject = styled.div`
 
     .imageContainer{
         height:100%;
+        margin-right: 3%;
     }
     .crop {
         overflow: hidden;
         width: 200px;
         height: 200px;
-        margin: 10px;
         border-radius: 3%;
         vertical-align: middle;
     }
@@ -94,6 +94,16 @@ const StyledProject = styled.div`
         object-position: 50% 50%;
         width: 200px;
         height: 200px;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        .imageContainer{
+            margin-right: 0%;
+            margin-bottom: 3%;
+        }
+        .information{
+            width: 100%;
+        }
     }
 `
 
@@ -128,7 +138,7 @@ class Project extends Component {
                             {this.props.stack.map((element, i) => {
                                 return (
                                     <div className="badge" key={i}>
-                                        <Chip label={element.name} color="secondary"  avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/"+element.icon+".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks"/>
+                                        <Chip label={element.name} color="secondary" avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks" />
                                     </div>
                                 )
                             })}

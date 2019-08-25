@@ -6,7 +6,7 @@ const StyledCard = styled.div`
     background: #f0f0f0;
     text-align: center;
     border-radius: 2px;
-    margin: 1%;
+    margin: 10px;
     width: 48%;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     z-index: 0;
@@ -42,14 +42,14 @@ class Card extends Component {
                         </div>
                     </StyledLargeCard>
             );
-    } else {
-    return (
-        <StyledCard >
-            <div className={this.props.type}>
-                {this.props.children}
-            </div>
-        </StyledCard>);
-}
+        } else {
+            return (
+                <StyledCard >
+                    <div className={this.props.type}>
+                        {this.props.children}
+                    </div>
+                </StyledCard>);
+        }
     }
 }
 
