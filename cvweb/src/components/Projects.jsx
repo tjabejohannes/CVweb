@@ -26,7 +26,7 @@ class Projects extends Component {
                 link: "http://tjabejv.nvg.org/",
                 description: "P5js is JavaScript's answer to the Processing graphical library. Both are OpenSource.",
                 stack: [{ name: 'Javascript', icon: "javascript-plain" }, { name: 'P5js', icon: "javascript-plain" },],
-                image: "http://localhost:3000/P5js.png",
+                image: "/img/P5js.png",
                 contributor: ['Tjabe Johannes van Lessen'],
             },
             {
@@ -34,7 +34,7 @@ class Projects extends Component {
                 link: "https://github.com/battleofthebases/game",
                 description: "TDT4240: Software Architecture Project. The task was to create a Android Game, with focus on good architecture.",
                 stack: [{ name: 'Java', icon: "java-plain" }, { name: 'Android', icon: "android-plain" }, { name: 'NodeJS', icon: "nodejs-plain" }, { name: "AWS", icon: "amazonwebservices-plain-wordmark" }],
-                image: "http://localhost:3000/BotB.jpg",
+                image: "/img/BotB.jpg",
                 contributor: ['Christian Nyvoll', 'Edvard Bakken', 'Håvard Aasmo', 'Tor Skuggevik', 'Tjabe Johannes van Lessen'],
             },
             {
@@ -42,7 +42,7 @@ class Projects extends Component {
                 link: "https://github.com/OlavH96/EIT",
                 description: "TDT4856: Eksperter i team.",
                 stack: [{ name: 'Java', icon: "java-plain" }, { name: 'Android', icon: "android-plain" }, { name: 'NodeJS', icon: "nodejs-plain" }],
-                image: "http://localhost:3000/EIT.png",
+                image: "/img/EIT.png",
                 contributor: ['Anders Ulfsnes', 'Espen Marinius Hansen', 'Olav Reppe Husby', 'Michael Skibeli Mullins', 'Tjabe Johannes van Lessen', 'Torstein Molland'],
             }
         ]

@@ -11,8 +11,8 @@ const StyledBaseInformation = styled.div`
 
     .information{
         display: flex;
+        justify-content:center;
         flex-direction: column;
-        margin-top:7%;
         width:70%;
     }
 

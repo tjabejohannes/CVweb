@@ -5,11 +5,13 @@ import { Chip, Avatar } from '@material-ui/core';
 const StyledDetailedInformation = styled.div`
     display: flex;
     width: 100%;
-    height:300px;
+    align-items: stretch;
+    max-height: 250px;
 
     .information{
         background-image: linear-gradient(to right, #f0f0f0 , #eaeaea);
         padding: 10px;
+        width: 30%;
     }
 
     .information h1{
@@ -27,9 +29,9 @@ const StyledDetailedInformation = styled.div`
         flex-direction: column;
         flex-wrap: wrap;
         width:70%;
-        margin-left:2%;
         text-align: left;
-        padding:5%;
+        padding-top:5%;
+        padding-bottom:5%;
     }
 
     .detail {

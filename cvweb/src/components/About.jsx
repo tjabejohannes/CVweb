@@ -45,7 +45,7 @@ class About extends Component {
 
                             </DetailedInformation>
                         </Card>)
-                })};
+                })}
             </StyledCardContainer>
         );
     }

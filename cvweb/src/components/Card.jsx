@@ -11,6 +11,9 @@ const StyledCard = styled.div`
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     z-index: 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    @media (max-width: 1200px) {
+        width: 98%;
+    }
 `
 
 const StyledLargeCard = styled(StyledCard)`
@@ -41,14 +44,14 @@ class Card extends Component {
                             {this.props.children}
                         </div>
                     </StyledLargeCard>
-            );
+            )
         } else {
             return (
                 <StyledCard >
                     <div className={this.props.type}>
                         {this.props.children}
                     </div>
-                </StyledCard>);
+                </StyledCard>)
         }
     }
 }
