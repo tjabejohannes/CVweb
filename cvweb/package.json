@@ -1,6 +1,6 @@
 {
-  "name": "cvweb",
-  "homepage": "http://tjabejohannes.github.io/CVweb",
+  "name": "CVweb",
+  "homepage": "https://tjabejohannes.github.io/CVweb/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
