@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Chip, Avatar } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
 
 const StyledDetailedInformation = styled.div`
     display: flex;
@@ -56,16 +57,26 @@ const StyledDetailedInformation = styled.div`
     .badge{
         margin-block-end:2%;
     }
-
-    .chipsTweaks{
-        background-color:  #fff;
-        color: #000;
-    }
-    .avatarTweaks{
-        background-color:  #fff;
-        padding: 7%;
-    }
 `
+
+const StyledChip = withStyles({
+    root: {
+        background:  '#fff',
+        color: '#000',
+    },
+    
+})(Chip);
+
+
+const StyledAvatar = withStyles({
+    root: {
+        background:  "#fff",
+        padding: "5%",
+        width: "30px",
+        height: "30px"
+    }
+    
+})(Avatar);
 
 class DetailedInformation extends Component {
     render() {
@@ -81,7 +92,11 @@ class DetailedInformation extends Component {
                     {this.props.details.map((element, i) => {
                         return (
                             <div className="badge" key={i}>
-                                <Chip label={element.name} color="secondary" avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks" />
+                                <StyledChip 
+                                    label={element.name} 
+                                    avatar={<StyledAvatar 
+                                                        alt={element.name} 
+                                                        src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} />} />
                             </div>
                         )
                     })}
