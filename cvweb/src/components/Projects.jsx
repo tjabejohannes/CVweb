@@ -16,7 +16,7 @@ class Projects extends Component {
             {
                 name: "ClipPost",
                 link: "https://github.com/tjabejohannes/ClipPost",
-                description: "ClipPost is a application that makes using the clipboard on your computer as efficient as possible.",
+                description: "ClipPost is a simple desktop clipboard application. It was developed to fight the inefficiency i experienced at a summer job.",
                 stack: [{ name: 'Electron', icon: "electron-original" }, { name: 'Javascript', icon: "javascript-plain" }],
                 image: "/img/clippost.png",
                 contributor: ['Tjabe Johannes van Lessen', 'Tor Skuggevik'],
@@ -32,16 +32,16 @@ class Projects extends Component {
             {
                 name: "BotB",
                 link: "https://github.com/battleofthebases/game",
-                description: "TDT4240: Software Architecture Project. The task was to create a Android Game, with focus on good architecture.",
+                description: "TDT4240: Software Architecture Project. The task was to create a Android Game, with focus on good architecture. More info about our project on the project page. *click*",
                 stack: [{ name: 'Java', icon: "java-plain" }, { name: 'Android', icon: "android-plain" }, { name: 'NodeJS', icon: "nodejs-plain" }, { name: "AWS", icon: "amazonwebservices-plain-wordmark" }],
                 image: "/img/BotB.jpg",
                 contributor: ['Christian Nyvoll', 'Edvard Bakken', 'Håvard Aasmo', 'Tor Skuggevik', 'Tjabe Johannes van Lessen'],
             },
             {
-                name: "Experter i team",
+                name: "Experts in Teamwork",
                 link: "https://github.com/OlavH96/EIT",
-                description: "TDT4856: Eksperter i team.",
-                stack: [{ name: 'Java', icon: "java-plain" }, { name: 'Android', icon: "android-plain" }, { name: 'NodeJS', icon: "nodejs-plain" }],
+                description: "TDT4856 IT-styring av moderne lastebiler (The Norwegian title). Experts in Teamwork (EiT) is a master’s degree course in which students develop their interdisciplinary teamwork skills. The course is compulsory for all students in master’s programmes and programmes of professional study at NTNU (NTNU's explanation of the course). More info about our project on the project page. *click*",
+                stack: [{ name: 'P5js', icon: "java-plain" }, { name: 'NodeJS', icon: "nodejs-plain" }],
                 image: "/img/EIT.png",
                 contributor: ['Anders Ulfsnes', 'Espen Marinius Hansen', 'Olav Reppe Husby', 'Michael Skibeli Mullins', 'Tjabe Johannes van Lessen', 'Torstein Molland'],
             }

@@ -10,7 +10,7 @@ const StyledDetailedInformation = styled.div`
     max-height: 250px;
 
     .information{
-        background-image: linear-gradient(to right, #f0f0f0 , #eaeaea);
+        background-image: linear-gradient(to bottom, #eaeaea,rgba(255,0,0,0));
         padding: 10px;
         width: 30%;
     }

@@ -60,19 +60,11 @@ const StyledProject = styled.div`
         margin-block-end:2%;
     }
 
-    .chipsTweaks{
-        background-color:  #fff;
-        color: #000;
-    }
-    .avatarTweaks{
-        background-color:  #fff;
-        padding: 5%;
-
-    }
-
     .technology{
         max-width: 60%;
         min-width: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .contributors{
