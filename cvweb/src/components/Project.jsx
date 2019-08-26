@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Chip, Avatar } from '@material-ui/core';
 import FaceIcon from '@material-ui/icons/Face';
 
-
+const homePath = process.env.PUBLIC_URL;
 
 const StyledProject = styled.div`
     
@@ -159,7 +159,9 @@ class Project extends Component {
                 </div>
                 <div className="imageContainer">
                     <div className="crop">
-                        <img src={process.env.PUBLIC_URL+this.props.image} alt="preview" />
+                        {console.log(""+homePath)}
+                        
+                        <img src={homePath+this.props.image} alt="preview" />
                     </div>
                 </div>
             </StyledProject>
