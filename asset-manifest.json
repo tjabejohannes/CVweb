@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/CVweb/static/js/main.b62fe12a.chunk.js",
-    "main.js.map": "/CVweb/static/js/main.b62fe12a.chunk.js.map",
+    "main.js": "/CVweb/static/js/main.cccc1fbb.chunk.js",
+    "main.js.map": "/CVweb/static/js/main.cccc1fbb.chunk.js.map",
     "runtime~main.js": "/CVweb/static/js/runtime~main.8dc67231.js",
     "runtime~main.js.map": "/CVweb/static/js/runtime~main.8dc67231.js.map",
-    "static/js/2.02787c68.chunk.js": "/CVweb/static/js/2.02787c68.chunk.js",
-    "static/js/2.02787c68.chunk.js.map": "/CVweb/static/js/2.02787c68.chunk.js.map",
+    "static/js/2.c0e80828.chunk.js": "/CVweb/static/js/2.c0e80828.chunk.js",
+    "static/js/2.c0e80828.chunk.js.map": "/CVweb/static/js/2.c0e80828.chunk.js.map",
     "index.html": "/CVweb/index.html",
-    "precache-manifest.cbf95ad0921c6f565a80a0b3e7561087.js": "/CVweb/precache-manifest.cbf95ad0921c6f565a80a0b3e7561087.js",
+    "precache-manifest.f9cf0cb8756fff0540d14b13d8098488.js": "/CVweb/precache-manifest.f9cf0cb8756fff0540d14b13d8098488.js",
     "service-worker.js": "/CVweb/service-worker.js"
   }
 }
