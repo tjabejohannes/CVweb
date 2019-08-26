@@ -18,7 +18,7 @@ class Projects extends Component {
                 link: "https://github.com/tjabejohannes/ClipPost",
                 description: "ClipPost is a application that makes using the clipboard on your computer as efficient as possible.",
                 stack: [{ name: 'Electron', icon: "electron-original" }, { name: 'Javascript', icon: "javascript-plain" }],
-                image: "https://raw.githubusercontent.com/tjabejohannes/velectron/master/front/Example%23.png",
+                image: "/img/clippost.png",
                 contributor: ['Tjabe Johannes van Lessen', 'Tor Skuggevik'],
             },
             {
