@@ -27,8 +27,8 @@ class App extends Component {
             </ul>
           </nav>
           <Switch>
-            <Route exact path='/' component={About} />
-            <Route path='/projects' component={Projects} />
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={About} />
+            <Route path={process.env.PUBLIC_URL + '/projects'} component={Projects} />
             {/*<Route path='/playground' component={Playground} />*/}
           </Switch>
         </StyledApp>
