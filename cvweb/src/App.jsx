@@ -14,6 +14,7 @@ const StyledApp = styled.div`
 
 
 class App extends Component {
+  homePath = process.env.PUBLIC_URL;
   render() {
     return (
       <Router>
@@ -21,14 +22,14 @@ class App extends Component {
           <nav className="navbar navbar-expand fixed-top navbar-light bg-light">
 
             <ul className="navbar-nav">
-              <li className="nav-item"><Link to={'/'} className="nav-link">About Me</Link></li>
-              <li className="nav-item"><Link to={'/projects'} className="nav-link">Projects</Link></li>
+              <li className="nav-item"><Link to={this.homePath + '/'} className="nav-link">About Me</Link></li>
+              <li className="nav-item"><Link to={this.homePath  + '/projects'} className="nav-link">Projects</Link></li>
               {/*<li><Link to={'/playground'} className="nav-link">Playground</Link></li>*/}
             </ul>
           </nav>
           <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'} component={About} />
-            <Route path={process.env.PUBLIC_URL + '/projects'} component={Projects} />
+            <Route exact path={this.homePath  + '/'} component={About} />
+            <Route path={this.homePath + '/projects'} component={Projects} />
             {/*<Route path='/playground' component={Playground} />*/}
           </Switch>
         </StyledApp>
