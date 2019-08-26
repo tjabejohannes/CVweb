@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/CVweb/static/js/main.096c1aa1.chunk.js",
-    "main.js.map": "/CVweb/static/js/main.096c1aa1.chunk.js.map",
+    "main.js": "/CVweb/static/js/main.b62fe12a.chunk.js",
+    "main.js.map": "/CVweb/static/js/main.b62fe12a.chunk.js.map",
     "runtime~main.js": "/CVweb/static/js/runtime~main.8dc67231.js",
     "runtime~main.js.map": "/CVweb/static/js/runtime~main.8dc67231.js.map",
     "static/js/2.02787c68.chunk.js": "/CVweb/static/js/2.02787c68.chunk.js",
     "static/js/2.02787c68.chunk.js.map": "/CVweb/static/js/2.02787c68.chunk.js.map",
     "index.html": "/CVweb/index.html",
-    "precache-manifest.3c8768161ffbcdf2231f498fc472c64e.js": "/CVweb/precache-manifest.3c8768161ffbcdf2231f498fc472c64e.js",
+    "precache-manifest.cbf95ad0921c6f565a80a0b3e7561087.js": "/CVweb/precache-manifest.cbf95ad0921c6f565a80a0b3e7561087.js",
     "service-worker.js": "/CVweb/service-worker.js"
   }
 }
