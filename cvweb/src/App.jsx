@@ -22,13 +22,13 @@ class App extends Component {
 
             <ul className="navbar-nav">
               <li className="nav-item"><Link to={'/CVweb'} className="nav-link">About Me</Link></li>
-              <li className="nav-item"><Link to={'/projects'} className="nav-link">Projects</Link></li>
+              <li className="nav-item"><Link to={'/CVweb/projects'} className="nav-link">Projects</Link></li>
               {/*<li><Link to={'/playground'} className="nav-link">Playground</Link></li>*/}
             </ul>
           </nav>
           <Switch>
             <Route exact path='/CVweb' component={About} />
-            <Route path='/projects' component={Projects} />
+            <Route path='/CVweb/projects' component={Projects} />
             {/*<Route path='/playground' component={Playground} />*/}
           </Switch>
         </StyledApp>
