@@ -159,7 +159,7 @@ class Project extends Component {
                 </div>
                 <div className="imageContainer">
                     <div className="crop">
-                        <img src={this.props.image} alt="preview" />
+                        <img src={process.env.PUBLIC_URL+this.props.image} alt="preview" />
                     </div>
                 </div>
             </StyledProject>
