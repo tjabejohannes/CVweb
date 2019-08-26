@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Chip, Avatar } from '@material-ui/core';
 import FaceIcon from '@material-ui/icons/Face';
+import { withStyles } from '@material-ui/styles';
 
 const homePath = process.env.PUBLIC_URL;
 
@@ -66,6 +67,7 @@ const StyledProject = styled.div`
     .avatarTweaks{
         background-color:  #fff;
         padding: 5%;
+
     }
 
     .technology{
@@ -107,6 +109,25 @@ const StyledProject = styled.div`
     }
 `
 
+const StyledChip = withStyles({
+    root: {
+        background:  '#fff',
+        color: '#000',
+    },
+    
+})(Chip);
+
+
+const StyledAvatar = withStyles({
+    root: {
+        background:  "#fff",
+        padding: "5%",
+        width: "30px",
+        height: "30px"
+    }
+    
+})(Avatar);
+
 class Project extends Component {
     constructor() {
         super();
@@ -138,7 +159,10 @@ class Project extends Component {
                             {this.props.stack.map((element, i) => {
                                 return (
                                     <div className="badge" key={i}>
-                                        <Chip label={element.name} color="secondary" avatar={<Avatar alt={element.name} src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} className="avatarTweaks" />} className="chipsTweaks" />
+                                        <StyledChip 
+                                            label={element.name} 
+                                            avatar={<StyledAvatar alt={element.name} src={"https://icongr.am/devicon/" + element.icon + ".svg?size=300"} />} 
+                                            />
                                     </div>
                                 )
                             })}
@@ -159,9 +183,9 @@ class Project extends Component {
                 </div>
                 <div className="imageContainer">
                     <div className="crop">
-                        {console.log(""+homePath)}
-                        
-                        <img src={homePath+this.props.image} alt="preview" />
+                        {console.log("" + homePath)}
+
+                        <img src={homePath + this.props.image} alt="preview" />
                     </div>
                 </div>
             </StyledProject>
